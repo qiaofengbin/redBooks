@@ -1,0 +1,14 @@
+.tuijian_header{
+  width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.tuijian_header video{
+  width: 100%;
+}
+.video-react .video-react-big-play-button{
+  transform: translate(-50%,-50%)!important;
+  top: 50%!important;
+  left: 50%!important;
+}
