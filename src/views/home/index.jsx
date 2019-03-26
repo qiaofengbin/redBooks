@@ -1,5 +1,5 @@
-import React, { Component,Fragment } from 'react'
-import { BrowserRouter as Router, Route, Switch,Redirect } from 'react-router-dom'
+import React, { Component, Fragment } from 'react'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 import NavBar from '../../components/navBar'
 import Tuijian from './components/tuijian'
@@ -13,7 +13,7 @@ import Jujia from './components/jujia'
 import Muying from './components/muying'
 import Shuma from './components/shuma'
 import Nanshi from './components/nanshi'
-import './style.css'
+import '../../static/css/style.css'
 
 class Home extends Component {
    constructor(props) {
@@ -21,27 +21,28 @@ class Home extends Component {
    }
    render() {
       return (
-         <div>
+         <Router>
             <Fragment>
-            <NavBar />
-                  <Switch>
-                     
-                     {/* Qfb07192026 */}
-                        <Route exact path='/tuijian' component={Tuijian} />
-                        <Route path='/shishang' component={Shishang} />
-                        <Route path='/meizhuang' component={Meizhuang} />
-                        <Route path='/meishi' component={Meishi} />
-                        <Route path='/yundong' component={Yundong} />
-                        <Route path='/yingyin' component={Yingyin} />
-                        <Route path='/lvxing' component={Lvxing} />
-                        <Route path='/jujia' component={Jujia} />
-                        <Route path='/muying' component={Muying} />
-                        <Route path='/shuma' component={Shuma} />
-                        <Route path='/nanshi' component={Nanshi} />
-                        <Redirect to="/tuijian"></Redirect>
-                  </Switch>
-               </Fragment>
-         </div>
+               <header>
+                  <NavBar />
+               </header>
+               <Switch>
+                  {/* Qfb07192026 */}
+                  <Route exact path='/tuijian' component={Tuijian} />
+                  <Route path='/shishang' component={Shishang} />
+                  <Route path='/meizhuang' component={Meizhuang} />
+                  <Route path='/meishi' component={Meishi} />
+                  <Route path='/yundong' component={Yundong} />
+                  <Route path='/yingyin' component={Yingyin} />
+                  <Route path='/lvxing' component={Lvxing} />
+                  <Route path='/jujia' component={Jujia} />
+                  <Route path='/muying' component={Muying} />
+                  <Route path='/shuma' component={Shuma} />
+                  <Route path='/nanshi' component={Nanshi} />
+                  <Redirect to="/tuijian"></Redirect>
+               </Switch>
+            </Fragment>
+         </Router>
       )
    }
 }

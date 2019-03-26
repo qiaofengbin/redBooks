@@ -13,8 +13,9 @@ router.get('/',(ctx,next)=>{
 router.prefix('/api');
 
 // 模拟json数据
-var user = require('./db/list.js');
-router.get('/recommend',(ctx,next)=>{
+var user = require('./data/list.js');
+router.get('/list',(ctx,next)=>{
+  console.log(user)
   ctx.response.body = user
 })
 
